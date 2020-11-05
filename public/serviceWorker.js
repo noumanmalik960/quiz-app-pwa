@@ -2,9 +2,9 @@ const CACHE_NAME = 'my-site-cache-v1'
 const urlToCache = [
   '/',
   'index.html',
-  // '/static/js/bundle.js',
-  // '/static/js/0.chunk.js',
-  // 'static/js/main.chunk.js'
+  '/static/js/bundle.js',
+  '/static/js/0.chunk.js',
+  '/static/js/main.chunk.js'
 ]
 
 self.addEventListener('install', function (event) {

@@ -22,22 +22,28 @@ const App: React.FC = () => {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
 
-  // console.log(questions);
-
   const startQuiz = async () => {
-    setLoading(true);
-    setGameOver(false);
+    try {
+      setLoading(true);
+      setGameOver(false);
+      const newQuestions = await fetchQuizQuestions(
+        TOTAL_QUESTIONS,
+        Difficulty.EASY
+      );
+      setQuestions(newQuestions);
+      setScore(0);
+      setNumber(0);
+      setUserAnswers([]);
+      setLoading(false);
+      // local storage
+      localStorage.setItem("questions", JSON.stringify(newQuestions));
+    } catch (error) {
+      const collectionData: any = localStorage.getItem("questions");
 
-    const newQuestions = await fetchQuizQuestions(
-      TOTAL_QUESTIONS,
-      Difficulty.EASY
-    );
-
-    setQuestions(newQuestions);
-    setScore(0);
-    setNumber(0);
-    setUserAnswers([]);
-    setLoading(false);
+      setQuestions(JSON.parse(collectionData));
+      console.log(JSON.parse(collectionData));
+      setLoading(false);
+    }
   };
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {

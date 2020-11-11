@@ -11,29 +11,55 @@ const urlsToCache = [
 ]
 
 
-self.addEventListener('install', function (event) {
-  // Perform install steps
+self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(function (cache) {
+      .then((cache) => {
         console.log('Opened cache');
+
         return cache.addAll(urlsToCache);
       })
-  );
+  )
 });
 
+// self.addEventListener('fetch', function (event) {
+//   if (!navigator.onLine) {
+
+//     event.respondWith(
+//       caches.match(event.request)
+//         .then(function (response) {
+//           if (response)
+//             return response;
+//           return fetch(event.request);
+//         })
+//     )
+//   }
+
+
+// })
+
+// // Listen for requests
+// // respond to request after we listen to them
+// self.addEventListener('fetch', (event) => {
+//   event.respondWith(
+//     caches.match(event.request)
+//       .then(() => {
+//         return fetch(event.request)
+//           .catch(() => caches.match('offline.html'))
+//       })
+//   )
+// });
+
 self.addEventListener('fetch', function (event) {
-  if (!navigator.onLine) {
-
-    event.respondWith(
-      caches.match(event.request)
-        .then(function (response) {
-          if (response)
-            return response;
-          return fetch(event.request);
-        })
-    )
-  }
-
-
-})
+  event.respondWith(
+    caches.match(event.request)
+      .then(function (response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+      )
+  );
+});

@@ -1,4 +1,4 @@
-const CACHE_NAME = "cache-v1"
+const CACHE_NAME = "version-1";
 const urlsToCache = [
   '/',
   '/index.html',
@@ -51,14 +51,19 @@ self.addEventListener('install', (event) => {
 // });
 
 self.addEventListener('fetch', function (event) {
+  console.log('cached suxxesfully')
+
   event.respondWith(
+
     caches.match(event.request)
       .then(function (response) {
         // Cache hit - return response
         if (response) {
           return response;
+
         }
         return fetch(event.request);
+
       }
       )
   );

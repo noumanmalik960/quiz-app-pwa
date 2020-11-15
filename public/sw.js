@@ -2,17 +2,17 @@ const CACHE_NAME = "version-1";
 const urlsToCache = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/js/0.chunk.js',
-  '/static/js/main.chunk.js',
-  '/manifest.json',
-  '/static/media/bg.759ecf3a.jpg',
-  '/images/logo.png',
+  // '/static/js/bundle.js',
+  // '/static/js/0.chunk.js',
+  // '/static/js/main.chunk.js',
+  // '/manifest.json',
+  // '/static/media/bg.759ecf3a.jpg',
+  // '/images/logo.png',
 
-  'https://quiz-pwa-knowmi.netlify.app/',
-  'https://quiz-pwa-knowmi.netlify.app/static/js/bundle.js',
-  'https://quiz-pwa-knowmi.netlify.app/static/js/0.chunk.js',
-  'https://quiz-pwa-knowmi.netlify.app/static/js/main.chunk.js',
+  // 'https://quiz-pwa-knowmi.netlify.app/',
+  // 'https://quiz-pwa-knowmi.netlify.app/static/js/bundle.js',
+  // 'https://quiz-pwa-knowmi.netlify.app/static/js/0.chunk.js',
+  // 'https://quiz-pwa-knowmi.netlify.app/static/js/main.chunk.js',
 
 ]
 

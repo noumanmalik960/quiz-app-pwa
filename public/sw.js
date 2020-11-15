@@ -7,7 +7,8 @@ const urlsToCache = [
   '/static/js/main.chunk.js',
   '/manifest.json',
   '/static/media/bg.759ecf3a.jpg',
-  '/images/logo.png'
+  '/images/logo.png',
+  'https://quiz-pwa-knowmi.netlify.app/'
 ]
 
 
@@ -83,7 +84,9 @@ self.addEventListener('activate', (event) => {
           return caches.delete(cacheName);
         }
       })
-    ))
+    )).catch((error) => {
+      console.log("error: ", error);
+    })
 
   )
 });

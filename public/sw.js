@@ -2,17 +2,16 @@ const CACHE_NAME = "version-1";
 const urlsToCache = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/js/0.chunk.js',
-  '/static/js/main.chunk.js',
-  '/manifest.json',
+  // '/static/js/bundle.js',
+  // '/static/js/0.chunk.js',
+  // '/static/js/main.chunk.js',
+  // '/manifest.json',
   '/static/media/bg.759ecf3a.jpg',
-  '/images/logo.png',
-
+  // '/images/logo.png',
   '/static/js/2.d7a32088.chunk.js',
   '/static/js/main.cace1e96.chunk.js',
-  'react_devtools_backend.js',
-  'inject.js'
+  // 'react_devtools_backend.js',
+  // 'inject.js'
 ]
 
 

@@ -55,7 +55,6 @@ self.addEventListener('install', (event) => {
 // });
 
 self.addEventListener('fetch', function (event) {
-  console.log('cached suxxesfully')
 
   event.respondWith(
 

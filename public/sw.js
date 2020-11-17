@@ -17,6 +17,8 @@ const urlsToCache = [
   '/static/js/main.chunk.js.map',
   '/static/js/0.chunk.js.map',
 
+  'https://relaxed-kepler-38f7d0.netlify.app/',
+
 ]
 
 

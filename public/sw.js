@@ -2,16 +2,17 @@ const CACHE_NAME = "version-1";
 const urlsToCache = [
   '/',
   '/index.html',
-  // '/static/js/bundle.js',
-  // '/static/js/0.chunk.js',
-  // '/static/js/main.chunk.js',
-  // '/manifest.json',
   '/static/media/bg.759ecf3a.jpg',
-  // '/images/logo.png',
   '/static/js/2.d7a32088.chunk.js',
   '/static/js/main.cace1e96.chunk.js',
-  // 'react_devtools_backend.js',
-  // 'inject.js'
+
+
+  // for localhost
+  '/images/logo.png',
+  '/static/js/bundle.js',
+  '/static/js/0.chunk.js',
+  '/static/js/main.chunk.js',
+  '/manifest.json',
 ]
 
 
@@ -26,33 +27,6 @@ self.addEventListener('install', (event) => {
   )
 });
 
-// self.addEventListener('fetch', function (event) {
-//   if (!navigator.onLine) {
-
-//     event.respondWith(
-//       caches.match(event.request)
-//         .then(function (response) {
-//           if (response)
-//             return response;
-//           return fetch(event.request);
-//         })
-//     )
-//   }
-
-
-// })
-
-// // Listen for requests
-// // respond to request after we listen to them
-// self.addEventListener('fetch', (event) => {
-//   event.respondWith(
-//     caches.match(event.request)
-//       .then(() => {
-//         return fetch(event.request)
-//           .catch(() => caches.match('offline.html'))
-//       })
-//   )
-// });
 
 self.addEventListener('fetch', function (event) {
 

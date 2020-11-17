@@ -13,6 +13,11 @@ const urlsToCache = [
   '/static/js/0.chunk.js',
   '/static/js/main.chunk.js',
   '/manifest.json',
+
+  // after adding firebase
+  '/static/js/main.chunk.js.map',
+  '/static/js/0.chunk.js.map',
+
 ]
 
 

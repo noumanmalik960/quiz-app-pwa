@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { fetchQuizQuestions, Difficulty, QuestionState } from "./api";
 // componets import
 import QuestionCard from "./components/QuestionCard";
 // styles
 import { GlobalStyle, Wrapper } from "./App.styles";
+// firebase import
+import firebase from "./firebase";
 
 export type AnswerObject = {
   question: string;
@@ -15,6 +17,19 @@ export type AnswerObject = {
 const TOTAL_QUESTIONS = 10;
 
 const App: React.FC = () => {
+  // firebase messaging
+  useEffect(() => {
+    const messaging = firebase.messaging();
+    messaging
+      .requestPermission()
+      .then(() => {
+        return messaging.getToken();
+      })
+      .then((token) => {
+        prompt("token: ", token);
+      });
+  }, []);
+
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [number, setNumber] = useState(0);

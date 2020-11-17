@@ -41,7 +41,6 @@ const App: React.FC = () => {
       const collectionData: any = localStorage.getItem("questions");
 
       setQuestions(JSON.parse(collectionData));
-      console.log(JSON.parse(collectionData));
       setLoading(false);
     }
   };

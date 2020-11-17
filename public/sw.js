@@ -21,6 +21,11 @@ const urlsToCache = [
 
   // 'https://relaxed-kepler-38f7d0.netlify.app/',
 
+  // for deployment
+  '/static/js/2.f8bbb368.chunk.js',
+  '/static/js/main.90d446bf.chunk.js',
+  '/static/media/bg.759ecf3a.jpg'
+
 ]
 
 

@@ -2,9 +2,9 @@ const CACHE_NAME = "version-1";
 const urlsToCache = [
   '/',
   '/index.html',
-  '/static/media/bg.759ecf3a.jpg',
-  '/static/js/2.d7a32088.chunk.js',
-  '/static/js/main.cace1e96.chunk.js',
+  // '/static/media/bg.759ecf3a.jpg',
+  // '/static/js/2.d7a32088.chunk.js',
+  // '/static/js/main.cace1e96.chunk.js',
 
   // for localhost
   '/images/logo.png',
@@ -12,12 +12,14 @@ const urlsToCache = [
   '/static/js/0.chunk.js',
   '/static/js/main.chunk.js',
   '/manifest.json',
+  '/static/media/bg.759ecf3a.jpg',
+
 
   // after adding firebase
-  '/static/js/main.chunk.js.map',
-  '/static/js/0.chunk.js.map',
+  // '/static/js/main.chunk.js.map',
+  // '/static/js/0.chunk.js.map',
 
-  'https://relaxed-kepler-38f7d0.netlify.app/',
+  // 'https://relaxed-kepler-38f7d0.netlify.app/',
 
 ]
 

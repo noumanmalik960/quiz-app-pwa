@@ -6,7 +6,6 @@ const urlsToCache = [
   '/static/js/2.d7a32088.chunk.js',
   '/static/js/main.cace1e96.chunk.js',
 
-
   // for localhost
   '/images/logo.png',
   '/static/js/bundle.js',
